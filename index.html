@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Image learning</title>
+</head>
+<body>
+    <section class="wrapper">
+        <h1>Responsive images</h1>
+
+        <p>
+            President Obama greets hospital personnel in the intensive care unit at Bagram Airfield in Afghanistan on May 1. The
+            president presented 10 Purple Hearts, three of them in the ICU.
+        </p>
+
+        <hr>
+        
+        <h3>HTML img-tag with <code>srcset</code></h3>
+        
+        <img
+            src="img/obama-small.jpg"
+            srcset="img/obama-large.jpg 1088w, img/obama-medium.jpg 782w, img/obama-small.jpg 547w"
+            sizes="(min-width: 480px) 100vw, 100vw"
+            alt="Barack Obama presenting Purple Hearts">
+
+        <h3>HTML picture-tag with <code>source</code></h3>
+
+        <picture>
+            <source srcset="img/obama-small.jpg" media="(max-width: 800px)">
+            <source srcset="img/obama-medium.jpg" media="(max-width: 1200px)">
+            <img src="img/obama-large.jpg" alt="Barack Obama presenting Purple Hearts">
+        </picture>
+    </section>
+</body>
+</html>
