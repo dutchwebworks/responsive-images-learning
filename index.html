@@ -12,28 +12,16 @@
 <body>
     <section class="wrapper">
         <header>
-            <h1>Responsive image learning (and art-direction)</h1>
-
-            <p>
-                <strong>
-                    View this page in various viewport widths to see the images below change with art-direction.
-                    The web browser will determine which image to load.
-                </strong>
-            </p>
+            <h1>Responsive image learning</h1>        
         </header>
 
-        <main>
-            <div class="intro">
-                <p>
-                    Usage of the HTML5 image-src-set and the picture -tag.
-                </p>
+        <main>    
+            <p>
+                <strong>
+                    Using the HTML5 image-src-set and the HTML picture -tag. View this page in various viewport widths. The web browser will determine which image to load.
+                </strong>
+            </p>
 
-                <p>
-                    Different cropped versions of the same image. Displaying at various viewport width to keep the focus in the image to a certain subject.
-                    And keeping the file-size, and therefor, the bandwidth low. Good for performance.
-                </p>
-            </div>   
-            
             <h2>Resources</h2>
 
             <ul>
@@ -44,25 +32,35 @@
 
             <h2>HTML demo's</h2>
             
-            <h3>HTML <code>img</code>-tag with <code>srcset</code> &amp; <code>sizes</code> attributes</h3>
+            <h3>HTML <code>img</code>-tag with <code>srcset</code> &amp; <code>sizes</code> attributes for increased performance</h3>
+
+            <p>Smaller canvas- and file-size of the same image (not cropped). For better loading performance and saving bandwidth.</p>
 
             <code>
                 &lt;img<br>
                     &nbsp;&nbsp;src="/img/obama-large.jpg"><br>
                     &nbsp;&nbsp;width="1080" height="726"<br>
                     &nbsp;&nbsp;alt="Barack Obama presenting Purple Hearts"<br>
-                    &nbsp;&nbsp;srcset="/img/obama-large.jpg 1080w, /img/obama-medium.jpg 768w, /img/obama-small.jpg 480w"<br>
+                    &nbsp;&nbsp;srcset="/obama.jpg?tr=w-1024 1024w, /obama.jpg?tr=w-768 768w, /obama.jpg?tr=w-480 480w"<br>
                     &nbsp;&nbsp;sizes="(min-width: 480px) 100vw, 100vw"&gt;<br><br>                
             </code>
+
+            <p>
+                The image below is loaded in various canvas sizes depending on the viewport width.
+            </p>
             
             <img
-                src="/img/obama-large.jpg"
+                src="https://ik.imagekit.io/dutchwebworks/obama-afghanistan-hostpital-purple-hearts.jpg"
                 width="1080" height="726" 
                 alt="President Obama greets hospital personnel in the intensive care unit at Bagram Airfield in Afghanistan on May 1. The president presented 10 Purple Hearts, three of them in the ICU."
-                srcset="/img/obama-large.jpg 1024w, /img/obama-medium.jpg 768w, /img/obama-small.jpg 480w"
+                srcset="https://ik.imagekit.io/dutchwebworks/obama-afghanistan-hostpital-purple-hearts.jpg?tr=w-1024 1024w, https://ik.imagekit.io/dutchwebworks/obama-afghanistan-hostpital-purple-hearts.jpg?tr=w-768 768w, https://ik.imagekit.io/dutchwebworks/obama-afghanistan-hostpital-purple-hearts.jpg?tr=w-480 480w"
                 sizes="(min-width: 480px) 100vw, 100vw">
 
-            <h3>HTML <code>picture</code>-tag with <code>source</code>-elements</h3>
+            <h3>HTML <code>picture</code>-tag with <code>source</code>-elements for (optional) art-direction in various viewports</h3>
+
+            <p>
+                Different <em>cropped</em> versions of the same image. For better art-direction and performance.
+            </p>
 
             <code>               
                 &lt;picture&gt;<br>
@@ -70,7 +68,9 @@
                     &nbsp;&nbsp;&lt;source srcset="/img/obama-medium.jpg" media="(max-width: 1200px)"&gt;<br>
                     &nbsp;&nbsp;&lt;img src="/img/obama-large.jpg" width="1080" height="726" alt="Barack Obama presenting Purple Hearts"&gt;<br>
                 &lt;/picture&gt;<br><br>                      
-            </code>            
+            </code>
+            
+            <p>The crop of the image below changes in various viewports. Keeping the focus on the subject.</p>
 
             <picture>
                 <source srcset="/img/obama-small.jpg" media="(max-width: 800px)">
