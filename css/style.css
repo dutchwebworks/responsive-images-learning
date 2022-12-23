@@ -5,6 +5,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    line-height: 1.5;
 }
 
 img,
@@ -12,8 +13,74 @@ picture {
     max-width: 100%;
 }
 
+h1 {
+    font-size: 3rem;
+    color: hotpink;
+}
+
+h2 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: deepskyblue;
+    border-bottom: 1px solid #ccc;
+}
+
+h3 {
+    margin-top: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+p {
+    margin-top: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: deepskyblue
+}
+
+a:hover {
+    color: hotpink;
+}
+
+.intro {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    font-size: 0,875rem;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer a:hover {
+    color: hotpink;
+}
+
+pre {    
+    color: #666;
+    font-family: monospace;
+}
+
 .wrapper {
-    max-width: 1200px;
+    max-width: 1080px;
     padding: 0 20px;
-    border: 1px solid pink;
 }
