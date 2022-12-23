@@ -71,6 +71,16 @@ footer a:hover {
     color: hotpink;
 }
 
+.code-block {
+    display: block;
+    background-color: #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    line-height: 2;
+}
+
 pre {    
     color: #666;
     font-family: monospace;
